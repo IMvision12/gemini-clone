@@ -76,9 +76,8 @@ export default function ChatPage() {
         className="pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(50%_50%_at_50%_50%,black,transparent)]"
         animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        style={{ backgroundImage: "url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1920&auto=format&fit=crop)", backgroundSize: "cover" }}
+        style={{ backgroundImage: "url(https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1920&auto=format&fit=crop)", backgroundSize: "cover" }}
       />
-
       <header className="relative z-10 mx-auto flex w-full max-w-5xl items-center justify-between gap-3 px-4 py-4">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Sparkles className="text-blue-500" size={18} />
