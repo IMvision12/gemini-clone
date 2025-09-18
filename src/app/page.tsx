@@ -10,8 +10,13 @@ const KEY_STORAGE = "GEMINI_API_KEY";
 
 export default function HomePage() {
   const [hasKey, setHasKey] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
-    try { setHasKey(!!localStorage.getItem(KEY_STORAGE)); } catch {}
+    setIsClient(true);
+    try { 
+      setHasKey(!!localStorage.getItem(KEY_STORAGE)); 
+    } catch {}
   }, []);
 
   return (
@@ -83,7 +88,7 @@ export default function HomePage() {
               href="/setup"
               className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-medium text-white shadow transition hover:translate-y-[-2px] hover:bg-blue-500 active:translate-y-0"
             >
-              {hasKey ? "Update API Key" : "Add API Key"}
+              {isClient ? (hasKey ? "Update API Key" : "Add API Key") : "Add API Key"}
             </Link>
             <Link
               href="/chat"
