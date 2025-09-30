@@ -4,7 +4,7 @@ export async function generateGeminiResponse(
   apiKey: string,
   messages: ChatMessage[]
 ): Promise<string> {
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${encodeURIComponent(apiKey)}`;
+  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(apiKey)}`;
 
   const contents = messages.map((m) => ({
     role: m.role,
